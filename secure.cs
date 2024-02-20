@@ -4,8 +4,6 @@ public class SecurityPassMaker
 {
     public string GetDisplayName(TeamSupport support)
     {
-        string[] all_titles = {"The Manager", "The Chairman", "The Physio", "Offensive Coach", "Goal Keeping Coach", "Security Team Member", "Security Junior", "Security Intern", "Police Liaison Officer"};
-        //string title = support.Title;
         if(support is Staff) 
         {
             if(support is Security && !(support is SecurityJunior || support is SecurityIntern || support is PoliceLiaison)) 
