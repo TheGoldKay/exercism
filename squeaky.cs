@@ -24,15 +24,9 @@ public static class Identifier
         char[] camel = new char[news.Length];
         if(news.Contains('-'))
         {
-            news = news.Replace("-", "");
+            int index = news.IndexOf('-');
             camel = news.ToCharArray();
-            for(int index = 0; index < camel.Length; index++)
-            {
-                if((index + 1)%2 == 0)
-                {
-                    camel[index] = char.ToUpper(camel[index]);
-                }
-            }
+            camel[index+1] = Char.ToUpper(camel[index+1]);
         }
         else 
         {
